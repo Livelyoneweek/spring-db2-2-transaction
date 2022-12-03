@@ -1,5 +1,9 @@
 package hello.springtx.order;
 
+import hello.springtx.order.NotEnoughMoneyException;
+import hello.springtx.order.Order;
+import hello.springtx.order.OrderRepository;
+import hello.springtx.order.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +19,8 @@ import static org.assertj.core.api.Fail.fail;
 @SpringBootTest
 class OrderServiceTest {
 
-    @Autowired OrderService orderService;
+    @Autowired
+    OrderService orderService;
 
     @Autowired
     OrderRepository orderRepository;
